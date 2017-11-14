@@ -1,0 +1,14 @@
+---
+# tasks file for apache2-ondrej
+
+# Figure out what version of Apache is installed.
+- name: Get installed version of Apache.
+  shell: "apache2 -v"
+  changed_when: false
+  check_mode: no
+  register: _apache_version
+  ignore_errors: true
+
+# Setup/install tasks.
+- include: "setup-{{ ansible_os_family }}.yml"
+  static: no

@@ -1,0 +1,5 @@
+---
+# defaults file for apache2-ondrej
+
+apache_ondrej_repository: "ppa:ondrej/apache2"
+apache_ondrej_install: true
